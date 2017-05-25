@@ -1,15 +1,4 @@
-# Arikai - A Javascript Library for Dyanmic Pivot Table
-# Detailed document - https://sites.google.com/site/niralaakkam/home
+<div dir="ltr" style="padding-left:20px;padding-right:20px"><div style="display:block;text-align:center;margin-right:auto;margin-left:auto"><h3 style="text-align:left"><b><font color="#45818e">Arikai - <font size="3">Javascript Pivot Table Library</font></font></b></h3><div><a href="https://sites.google.com/site/niralaakkam/home" imageanchor="1"></a><div style="display:block;text-align:left"><b style="font-size:small"><p> ARIKAI Pivottable is a javascript data summarization tool, takes JSON object as input and that automatically extracts, organizes, and summarizes them by preferred categories and forms rows and columns in effortless way. </p>
+  <p>ARIKAI Pivottable brings the features of Excel’s PivotTable to web applications, and it makes easy to web programmer for generating meaningful information from raw JSON data to complex cross-table reports online.</p><p>   ARIKAI Pivottable offers edit and filter layout options. In just few clicks, it enables end users to manipulate data with different categorization and calculations, which allows users to analyze the relationship between data points dynamically online. Since it is with Javascript and Jquery, can be used in any web applications (supports ASP.Net and Java web applications)</p><br><div><p><img alt="Pivot javascript library - Arikai" border="0" src="https://sites.google.com/site/niralaakkam/home/Niral_Aakkam_Arikai_Sample1.3.JPG" style="height:200px;width:900px"></p><p><b style="font-family:arial,sans-serif;font-size:medium">Arikai Pivottable Features</b></p><div><ul><li><span style="line-height:19px;font-family:arial,sans-serif;font-size:small">Easy to plug-in any web applications, easily configurable</span></li><li><font face="arial, sans-serif" size="2"><span style="line-height:19px">Client-side; light weight; HTML, Javascript and Jquery based</span></font></li><li><font face="arial, sans-serif" size="2"><span style="line-height:19px">Supports multi browsers</span></font></li><li><font face="arial, sans-serif" size="2"><span style="line-height:19px">Ability to add multilevel row and column area fields</span></font></li><li><font face="arial, sans-serif" size="2"><span style="line-height:19px">Supports SUM, AVG, COUNT, MAX and MIN aggregate functions.</span></font></li><li><font face="arial, sans-serif" size="2"><span style="line-height:19px">Provides utility to edit and filter layout of generated report in client-side.</span></font></li><li><font face="arial, sans-serif" size="2"><span style="line-height:19px">Simple CSS style sheet</span></font></li></ul><div><br></div><div><br></div></div><div></div>
+</div>
 
-Arikai version 1.2
-
-Filter fields data
-Arikai version 1.3
-
-New css and Filter dialog look and feel changes
-Few bug fixes
-Arikai version 1.3.1
-
-Option to hide Grand Total, Subtotal rows & columns.
-Set default empty cell values.
-Option to hide Edit Layout / Filter options.
