@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Sample Report Page</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.22/jquery-ui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href=http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/themes/base/jquery-ui.css />
+
+    <script src="Scripts/Arikai.min.js" type="text/javascript"></script>
+    <script src="Scripts/SampleData.js" type="text/javascript"></script>
+    <link href="Styles/Arikai.css" rel="stylesheet" type="text/css" />
+
+      <script type="text/javascript">
+          $(document).ready(function () {
+              var pv = new Arikai();
+              setTimeout(function () { pv.LoadingProgress("report", true) }, 10);
+              //LoadModel(pv);
+              LoadSample(pv)
+          });
+
+          function LoadSample(pv) {
+              pv.ColulmnAreaFields = "Category";  // Column data field
+              pv.RowAreaFields = "Project";  // Row data field
+              pv.OptionFields = "City,Department,Designation";  //option fields for Edit layout.
+              pv.DataAreaField = "Sum(Salary)";  //Data area field
+              pv.DataDisplayType = DataType.Amount;  //Data type [Integer,Decimal,Amount,Date]
+              pv.CustomDecimalPoint = DecimalPoint.None;  // Customise decimal point: [None,One,Two,Three,Four]
+              pv.ReportTitle = "Sales Report";  // Header for Report
+              pv.ReportData = SampleData;  // Json data
+              pv.ContainerElementId = "report";  // Container where pivot table will be appended
+              pv.IsLayoutEditable = true; // Default - true
+              pv.IsDataFilterable = true; // Default - true
+              pv.ShowSubTotal = false;
+              pv.ShowGrandTotal = false;
+              pv.EmptyCellValue = "None"; // Default - 0
+              pv.Start();  // Create Report
+          }  
+
+          function LoadModel(pv) {
+              $.ajax({
+                  type: "GET",
+                  url: "Services/DataService.svc/GetData",
+                  contentType: "application/json; charset=utf-8",
+                  success: function (msg) {
+                      pv.ColulmnAreaFields = "Year";
+                      pv.RowAreaFields = "Country";
+                      pv.OptionFields = "Month,Store";
+                      pv.DataAreaField = "Sum(Sales)";
+                      pv.DataDisplayType = DataType.Amount;
+                      pv.CustomDecimalPoint = DecimalPoint.None;
+
+                      pv.ReportTitle = "Sales Report";
+                      pv.ReportData = eval(msg.GetDataResult);
+                      pv.ContainerElementId = "report";
+                      pv.Start();
+                  },
+                  error: function (msg) {
+                      var m = msg;
+                      alert(m.toString());
+                  }
+              });
+          }
+
+         
+    </script>
+</head>
+<body>
+<div id="report">
+    </div>
+</body>
+</html>

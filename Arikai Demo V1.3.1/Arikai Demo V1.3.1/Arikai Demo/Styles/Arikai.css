@@ -1,0 +1,531 @@
+﻿.Container
+{
+    border: 1px solid #AAA;
+    float: left;
+    background-color: #003355;
+    width: 100%;
+}
+
+.ReportTable
+{
+    width: 100%;
+    background-color:White;
+    border-spacing:0;
+  border-collapse:collapse;
+}
+
+.ReportTable, .ReportTable tr, .ReportTable th, .ReportTable td
+{
+    margin: 0px;
+    border: 1px solid #AAA;
+}
+
+.ReportTable td
+{
+    text-align: center;
+    padding: 3px 5px 3px;
+    width: 200px;
+}
+
+.SubAgg, .GrandAgg
+{
+    background-color: #E8EDFF !important;
+    font-weight: bold;
+    text-align: right !important;
+    color:#669;
+}
+
+.Header-SubAgg, .Header-GrandAgg
+{
+    background-color:#E8EDFF;
+    font-weight: bold;
+    color:#669;
+}
+
+.Header-SubAgg
+{
+    text-align: right !important;
+}
+
+.DataCell
+{
+    text-align: right !important;
+    background-color: #E8EDFF;
+    color:#669;
+}
+
+.RowHover
+{
+    background-color: #D0DAFD;
+    color:#669;
+}
+
+
+.Header
+{
+    background-color: #B9C9FE;
+    font-weight: bold;
+    color: #039;
+}
+
+.Header-Row
+{
+    background-color: #B9C9FE;
+    font-weight: bold;
+    text-align: right !important;
+    vertical-align: top;
+    color: #039;
+}
+
+.Header-Column
+{
+    background-color: #B9C9FE;
+    font-weight: bold;
+    height: 35px;
+    color: #039;
+}
+
+
+.Heighlight
+{
+    background-color: #003300;
+    color: #fff;
+    cursor: pointer;
+}
+
+.AcceptClass
+{
+    background-color: Green;
+}
+
+.DragHelper
+{
+    background-color: #EEEEEE;
+    color: Gray;
+    padding: 10px;
+    border: 1px solid Gray;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    border: 1px solid;
+}
+
+
+.Toggle
+{
+    display: inline;
+    height: auto;
+}
+
+
+#reportHeader
+{
+    float: left;
+    background: #fff;
+    color: #555555;
+    z-index: 100;
+    background-color: transparent;
+    font-weight: bold;
+    padding: 15px;
+    margin-left: 5px;
+    color: #fff;
+}
+
+/* Error Dialog Style*/
+#Error
+{
+    position: fixed;
+    _position: absolute;
+    z-index: 99;
+    left: 40%;
+    top: 30%;
+    padding:10px;
+    width: 300px;
+    height: auto;
+    _height: expression(document.body.offsetHeight + "px");
+    background-color: #FFFFEE;
+    border: 1px solid Gray;
+    word-wrap: break-word;
+}
+
+#Error img
+{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+}
+
+#Error span
+{
+    width:200px;
+    float:left;
+    color: Black;
+    font-weight: bold;
+    vertical-align: baseline;
+    position: relative;
+    top: 10%;
+    left: 35%;
+    
+}
+
+.ErrorHeader
+{
+    font-size:26px;
+    padding-bottom:10px;
+    color:Red !important;
+}
+
+.ErrorHighLight
+{
+    color:Red !important;
+}
+
+/* End Error Dialog Style */
+
+
+
+
+/* Loading Panel Style */
+
+.Loading
+{
+    
+    position: fixed;
+    _position: absolute;
+    z-index: 99;
+    left: 45%;
+    top: 40%;
+    padding:20px;
+    width: 100px;
+    height: auto;
+    _height: expression(document.body.offsetHeight + "px");
+    background: #fff;
+    border: 1px solid Gray;
+}
+
+.Loading img
+{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.Loading span
+{
+    width:200px;
+    float:left;
+    color: Black;
+    font-weight: bold;
+    vertical-align: baseline;
+    position: relative;
+    top: 10%;
+    left: 15%;
+}
+
+/* End Loading Panel Style */
+
+
+
+/* Edit Layout Style*/
+
+#EditDialog, #FilterDialog
+{
+    background: #999 !important;
+    color: #FFFFFF;
+    border:1px solid gray;
+    overflow:hidden;
+}
+
+#ColumnDropdown, #FunctionDropdown
+{
+    float: right;
+    color: #555;
+    width: 50px;
+    position: relative;
+    height: 50px;
+    text-align: left;
+}
+
+#ColumnSubmenu, #FunctionSubmenu
+{
+    background: #fff;
+    position: absolute;
+    z-index: 100;
+    width: 150px;
+    display: none;
+    top: 50px;
+    margin-left: -100px;
+    padding: 0px 0 0px;
+    border: 1px solid #AAA;
+    z-index:1001;
+}
+#ColumnDropdown li, #FunctionDropdown li
+{
+    color: #555555;
+    display: block;
+    font-weight: bold;
+    font-size:small;
+    padding: 6px 15px;
+    cursor: pointer;
+    width: 120px;
+    text-decoration: none;
+    z-index:1000;
+}
+
+#ColumnDropdown li:hover, #FunctionDropdown li:hover
+{
+    background: #EEE;
+    color: #666;
+    text-decoration: none;
+}
+
+div.ColumnHeader, div.FunctionHeader
+{
+    font-weight: bold;
+    color: #555;
+    position: absolute;
+    z-index: 110;
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin: 0px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+div.ColumnHeader
+{
+    background: url(icons/FieldRack.png) 5px 2px no-repeat;
+}
+
+div.ColumnDropdown:hover
+{
+    background: #EEEEEE url(icons/FieldRack.png) 5px 2px no-repeat;
+}
+
+div.FunctionHeader
+{
+    background: url(icons/function.gif) 10px 13px no-repeat;
+}
+
+div.FunctionHeader:hover
+{
+    background: #EEEEEE url(icons/function.gif)  10px 13px no-repeat;
+}
+
+.ColumnList, .FunctionList
+{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    width: 150px;
+    padding: 0px 0 0 0px;
+    border-top: 1px solid #dedede;
+}
+
+#PopupHeader
+{
+    float: left;
+    color: #555555;
+    z-index: 100;
+    background-color: transparent;
+    font-weight: bold;
+    padding: 15px;
+    margin-left: 5px;
+    color: #FFFFFF;
+    width:90%;
+    font-size:medium;
+}
+
+#ColFieldList
+{
+    float: left;
+    position: relative;
+    width:150px;
+    height:100px;
+    border:1px solid Black;
+}
+
+#DataArea
+{
+    float: left;
+    position: relative;
+    width:150px;
+    height:100px;
+    border:1px solid Black;
+    
+}
+
+
+
+#RowFieldList, #MenuList
+{
+    
+    float: left;
+    position: relative;
+    width:150px;
+    height:100px;
+    border:1px solid Black;
+    
+}
+
+
+#RowFieldList ul, #ColFieldList ul, #DataArea ul
+{
+    list-style: none;
+    margin: 0px;
+    padding: 2px 0 0 0;
+    border-top: 1px solid #dedede;
+    height:100px;
+}
+
+
+#RowFieldList ul li,#ColFieldList ul li, #DataArea ul li
+{
+    float:left;
+    color: #555555;
+    background: #E8EDFF !important;
+    border:1px solid #AAA !important;
+    display:block;
+    font-weight: bold;
+    font-size:small;
+    padding: 2px 2px;
+    cursor: pointer;
+    word-wrap:break-word;
+    width:144px;
+}
+
+#DataArea ul li
+{
+    cursor:inherit;
+}
+
+
+#LayOut
+{
+    position:relative;
+    width:100%;
+    padding:20px;
+}
+
+
+#GoButton, #CancelButton, #EditButton, #FilterButton, #FilterCancelButton, #FilterGoButton {
+    cursor:pointer;
+    position:relative;
+    float:right;
+    margin:10px 10px 0 10px;
+ 
+	/*basic styles*/
+	width: 100px;  
+	height: 25px;  
+	color: #669; 
+	background-color:#E4F3FF;
+	text-align: center;  
+	font-size: small;  
+	font-weight:bold;
+    vertical-align:middle;
+    border:1px solid #79BCEA;
+    line-height: 25px;
+}
+
+
+#GoButton:hover, #CancelButton:hover, #EditButton:hover, #FilterButton:hover, #FilterCancelButton:hover, #FilterGoButton:hover {
+    background:#669;
+    color:#E4F3FF;
+    border:1px solid #79BCEA;
+} 
+
+#GoButton:hover, #CancelButton:hover, #EditButton:hover, #FilterButton:hover, #FilterCancelButton:hover, #FilterGoButton:hover {
+    background:#669;
+    color:#E4F3FF;
+    border:1px solid #E4F3FF;
+}  
+
+#DialogHeader
+{
+    color: #555555;
+    z-index: 100;
+    background-color: transparent;
+    font-weight: bold;
+    padding: 15px;
+    margin-left: 5px;
+    
+    color: #FFFFFF;
+    font-size:medium;
+}
+ 
+ .FilterHeader
+ {
+     font-size:small;
+     font-weight:bold;
+ }
+ 
+ #FilterLayout
+ {
+
+ }
+ 
+ 
+ 
+  .FieldItem
+ {
+     float: left;
+     position:relative;
+     padding:5px;
+     background-color:#DDDDDD;
+     margin:0px 2px 2px 0px; 
+     width:100px;
+     color:Black;
+     font-size:small;
+     font-weight:bold;
+ }
+ 
+ .FilterSubMenu
+{
+    z-index: 100;
+    top:0px;
+    padding: 0px 0 0px ;
+    height:100px;
+    overflow:auto;
+    border:1px solid #888;
+    z-index:1010;
+}
+ 
+
+ 
+ .FilterSubMenu ol
+{
+    list-style: none;
+    margin: 0px;
+    padding: 2px 0 0 0;
+    width:600px;
+}
+
+
+.FilterSubMenu ol li
+{
+
+    color: #555555;
+    font-weight: bold;
+    font-size:small;
+    padding: 2px 2px;
+    cursor: pointer;
+    word-wrap:break-word;
+    width:144px;
+    float:left;
+    display:list-item;
+    
+}
+ 
+ 
+ 
+.FieldHeader
+{
+    font-size:small;
+    font-weight:bold;
+    color:#222222;
+}
+
+/* End Edit Layout Style*/
+
+
